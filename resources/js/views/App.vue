@@ -5,7 +5,21 @@
 <script>
 
 export default {
-    name: 'App' 
+    name: 'App',
+    data() {
+        return {
+            posts:[]
+        };
+    },
+    created() {
+        axios.get('http://localhost:800/api/posts')
+        .then((response) =>{
+            console.log(response);
+        })
+        .catch((e) => {
+            console.log(e);
+        });
+    }
 }
 </script>
 
