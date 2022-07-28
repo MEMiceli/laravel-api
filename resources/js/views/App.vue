@@ -12,9 +12,9 @@ export default {
         };
     },
     created() {
-        axios.get('http://localhost:800/api/posts')
+        axios.get('http://localhost:8001/api/posts')
         .then((response) =>{
-            console.log(response);
+            console.log(response.data);
         })
         .catch((e) => {
             console.log(e);

@@ -1916,8 +1916,8 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    axios.get('http://localhost:800/api/posts').then(function (response) {
-      console.log(response);
+    axios.get('http://localhost:8001/api/posts').then(function (response) {
+      console.log(response.data);
     })["catch"](function (e) {
       console.log(e);
     });
