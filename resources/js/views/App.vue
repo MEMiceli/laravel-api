@@ -1,5 +1,13 @@
 <template>
-    <h1>Vue JS finalmente</h1>
+    <div>
+        <h1>Lista posts</h1>
+        <ul>
+            
+            <li v-for="post in posts" :key="post.slug">
+                {{post.title}}
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -14,7 +22,7 @@ export default {
     created() {
         axios.get('http://localhost:8001/api/posts')
         .then((response) =>{
-            console.log(response.data);
+            this.posts = response.data;
         })
         .catch((e) => {
             console.log(e);
