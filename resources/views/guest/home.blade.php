@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="{{asset('css/front.css')}}">
 </head>
 <body>
-    <div id="App">
-        <h1>Voglio l'impostazione molecolare di Vue</h1>
+    <div id="app">
     </div>
+    <h1>Pagina Guest</h1>
     <script src="{{asset('js/front.js')}}"></script>
 </body>
 </html>
